@@ -1,0 +1,36 @@
+<div class="container border border-dark p-3">
+  <h3>Data Binding</h3>
+  <p>One Way Data Binding</p>
+  <div class="container">
+    <h5>[1] Interpolation</h5>
+    <p>Welcome, {{ userName }}!</p>
+    <h5>[2] Property Binding</h5>
+    <input type="text" [value]="userName" />
+    <!--<input type="text" [value]="'Amit'" />
+    => directly providing value using '' -->
+
+    <h5>[3] Style Binding</h5>
+    <p [style.color]="textcolors">Hii Amex</p>
+    <p
+      [style.border-radius]="borderradius + 'px'"
+      [style.border]="'5px solid pink'"
+    >
+      Hii... Mizo
+    </p>
+    <p [style.background-color]="isError ? 'red' : 'yellow'">Hii... Mili</p>
+
+    <h5>[4] Event Binding</h5>
+    <button class="btn btn-success" (click)="showAlert()">click Me!</button>
+    <p [style.border]="border" class="mt-2">Hii Amit</p>
+    <button class="btn btn-primary" (click)="changeBorder()">
+      change border
+    </button>
+    <hr />
+    <div [style.border]="border" style="padding: 10px; display: inline-block">
+      Click the button to change my border!
+    </div>
+    <br />
+    <button (click)="toggleBorder()">Toggle Border</button>
+  </div>
+  <p>Two Way Data Binding</p>
+</div>
