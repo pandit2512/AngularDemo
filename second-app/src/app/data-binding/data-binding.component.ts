@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'data-binding',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './data-binding.component.html',
   styleUrl: './data-binding.component.css',
 })
@@ -13,6 +14,10 @@ export class DataBindingComponent {
   isError: boolean = false;
   border: string = '2px solid red';
   isBorderChanged: boolean = false;
+
+  firstNum: number = 0;
+  secondNum: number = 0;
+  radius: number = 0;
 
   showAlert() {
     alert('event Data Binding');

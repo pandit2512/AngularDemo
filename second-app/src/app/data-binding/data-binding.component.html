@@ -32,5 +32,17 @@
     <br />
     <button (click)="toggleBorder()">Toggle Border</button>
   </div>
+  <hr />
   <p>Two Way Data Binding</p>
+  <h3>{{ userName }}</h3>
+  <input type="text" [(ngModel)]="userName" />
+  <hr />
+  <p>sum of Two Number</p>
+  <input type="number" [(ngModel)]="firstNum" />
+  <input type="number" [(ngModel)]="secondNum" />
+  <h4>Addition is {{ firstNum + secondNum }}</h4>
+  <hr />
+  <p>Area of Circle:</p>
+  <input type="number" placeholder="Enter radius" [(ngModel)]="radius" />
+  <h4>Area of Circle is: {{ 3.14 * radius * radius }}</h4>
 </div>
