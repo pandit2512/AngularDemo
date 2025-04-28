@@ -1,8 +1,10 @@
 <div class="container">
   <p>parent works!</p>
+  <p>id: {{ receivedStudent.id }} name: {{ receivedStudent.name }}</p>
   <app-child
     [receivedData]="parentData"
     (childData)="receivedDataFromChild($event)"
     (arrayEmitter)="receivedArray($event)"
+    (student)="getStudent($event)"
   ></app-child>
 </div>

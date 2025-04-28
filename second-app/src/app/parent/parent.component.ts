@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ChildComponent } from '../child/child.component';
+import { ChildComponent, Student } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -10,6 +10,13 @@ import { ChildComponent } from '../child/child.component';
 export class ParentComponent {
   parentData: any = { message: 'Data sent from parent', status: 'OK' };
 
+  //====================
+  receivedStudent: Student = { id: 0, name: '' };
+
+  getStudent(data: Student) {
+    this.receivedStudent = data;
+  }
+  //========================
   receivedDataFromChild(data: string) {
     alert(data);
   }

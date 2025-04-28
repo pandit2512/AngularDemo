@@ -1,5 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+export interface Student {
+  id: number;
+  name: string;
+  marks?: number;
+}
+
+//==============
 @Component({
   selector: 'app-child',
   imports: [],
@@ -20,5 +27,11 @@ export class ChildComponent {
   @Output() arrayEmitter = new EventEmitter<any[]>();
   sendArray() {
     this.arrayEmitter.emit(this.arr);
+  }
+  //=========================
+  @Output() student = new EventEmitter<Student>();
+
+  sendStudent() {
+    this.student.emit({ id: 101, name: 'Punkk' });
   }
 }
