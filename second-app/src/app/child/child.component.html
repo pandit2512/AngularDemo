@@ -1,0 +1,15 @@
+<div class="container border border-dark">
+  <p>child works!</p>
+  <ul>
+    <li>{{ receivedData.message }}</li>
+    <li>{{ receivedData.status }}</li>
+  </ul>
+
+  <button class="btn btn-primary m-2" (click)="sendMessage()">
+    send data to parent
+  </button>
+  <hr />
+  <button class="btn btn-success m-2" (click)="sendArray()">
+    Received Array
+  </button>
+</div>

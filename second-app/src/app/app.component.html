@@ -6,3 +6,13 @@
 <data-binding></data-binding>
 <hr />
 <app-pipe-examples></app-pipe-examples>
+<hr />
+<app-student
+  [studentId]="101"
+  [studentName]="'Amex'"
+  [studentMarks]="90"
+></app-student>
+<app-student [studentId]="102" [studentName]="'mili'" [studentMarks]="95">
+</app-student>
+<hr />
+<app-parent></app-parent>

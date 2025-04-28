@@ -1,0 +1,8 @@
+<div class="container">
+  <p>parent works!</p>
+  <app-child
+    [receivedData]="parentData"
+    (childData)="receivedDataFromChild($event)"
+    (arrayEmitter)="receivedArray($event)"
+  ></app-child>
+</div>
