@@ -1,0 +1,59 @@
+<div class="container border border-dark m-2">
+  <p>directive-example works!</p>
+  <h3 *ngIf="status">This is Heading</h3>
+
+  <hr />
+
+  <h3 *ngIf="loggedIn; else elseBlock">Logged In</h3>
+
+  <ng-template #elseBlock>
+    <h3>You are logged Out</h3>
+  </ng-template>
+
+  <button class="btn btn-primary m-3" (click)="login()">
+    {{ loggedIn ? "Logout" : "Login" }}
+  </button>
+
+  <hr />
+  <div *ngIf="status; then even; else odd"></div>
+  <ng-template #even>
+    <h3>Hii...Amex</h3>
+  </ng-template>
+  <ng-template #odd>
+    <h3>Bye...Amex</h3>
+  </ng-template>
+
+  <hr />
+  <button class="btn btn-primary m-2" (click)="display()">
+    Toggle Template
+  </button>
+
+  <div *ngIf="show; then x; else y"></div>
+  <ng-template #x>This is Inside Template</ng-template>
+  <ng-template #y>This is Outside Template</ng-template>
+
+  <hr />
+
+  <h3
+    *ngFor="let x of data; index as b; first as c; last as d"
+    class="bg-danger text-white text-center m-3"
+  >
+    {{ x }} {{ b }} {{ c }} | {{ d }}
+  </h3>
+  <hr />
+  <div *ngFor="let student of student">
+    ID: {{ student.studentId }}, Name: {{ student.studentName }}
+  </div>
+
+  <hr />
+
+  <div
+    *ngFor="let color of colors"
+    [style.backgroundColor]="color"
+    class="circle"
+  ></div>
+</div>
+
+<hr />
+
+<app-switch-example></app-switch-example>

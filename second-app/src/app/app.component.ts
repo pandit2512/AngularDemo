@@ -6,6 +6,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { PipeExamplesComponent } from './pipe-examples/pipe-examples.component';
 import { StudentComponent } from './student/student.component';
 import { ParentComponent } from './parent/parent.component';
+import { DirectiveExampleComponent } from './directive-example/directive-example.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { ParentComponent } from './parent/parent.component';
     PipeExamplesComponent,
     StudentComponent,
     ParentComponent,
+    DirectiveExampleComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

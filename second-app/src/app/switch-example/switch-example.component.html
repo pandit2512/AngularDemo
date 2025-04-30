@@ -1,0 +1,12 @@
+<div class="container">
+  <h4>{{ requestStatus }}</h4>
+  <button class="btn btn-primary m-3" (click)="changeStatus('Pending')">
+    Pending
+  </button>
+  <button class="btn btn-success m-3" (click)="changeStatus('Approved')">
+    Approved
+  </button>
+  <button class="btn btn-danger m-3" (click)="changeStatus('Rejected')">
+    Rejected
+  </button>
+</div>
