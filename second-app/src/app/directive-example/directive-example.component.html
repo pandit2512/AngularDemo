@@ -104,9 +104,16 @@
 
   <br />
 
-  <button btn btn-primary (click)="changeStyle('style1')">Style 1</button>
-  <button btn btn-info (click)="changeStyle('style2')">Style 2</button>
-  <button btn btn-info (click)="changeStyle('style3')">Style 3</button>
-  <button btn btn-info (click)="changeStyle('style4')">Style 4</button>
-  <button btn btn-info (click)="changeStyle('style5')">Style 5</button>
+  <button class="btn btn-primary" (click)="changeStyle('style1')">
+    Style 1
+  </button>
+  <button class="btn btn-info" (click)="changeStyle('style2')">Style 2</button>
+  <button class="btn btn-info" (click)="changeStyle('style3')">Style 3</button>
+  <button class="btn btn-info" (click)="changeStyle('style4')">Style 4</button>
+  <button class="btn btn-info" (click)="changeStyle('style5')">Style 5</button>
+
+  <hr />
+
+  <h2 [ngStyle]="boxStyle()">Hello</h2>
+  <button class="btn btn-info" (click)="changeHighlight()">Style 5</button>
 </div>

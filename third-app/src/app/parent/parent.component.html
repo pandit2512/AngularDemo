@@ -1,0 +1,18 @@
+<p>parent works!</p>
+
+<div class="container border border-primary">
+  <h3>Count is {{ count }}</h3>
+  <button class="btn btn-success" (click)="increment()">increment</button>
+
+  <app-child [data]="parentData" *ngIf="count < 5"></app-child>
+
+  <button class="btn btn-primary m-3" (click)="changeParentData('ABC')">
+    ABC
+  </button>
+  <button class="btn btn-primary m-3" (click)="changeParentData('PQR')">
+    PQR
+  </button>
+  <button class="btn btn-primary m-3" (click)="changeParentData('XYZ')">
+    XYZ
+  </button>
+</div>

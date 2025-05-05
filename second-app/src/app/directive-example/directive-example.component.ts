@@ -32,6 +32,8 @@ export class DirectiveExampleComponent {
 
   colors = ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red'];
 
+  isHighlighted: boolean = false;
+
   login() {
     this.loggedIn = !this.loggedIn;
   }
@@ -42,6 +44,18 @@ export class DirectiveExampleComponent {
 
   changeTheme() {
     this.darkTheme = !this.darkTheme;
+  }
+
+  boxStyle() {
+    return {
+      color: 'red',
+      border: '2px solid black',
+      'background-color': this.isHighlighted ? 'yellow' : 'white',
+    };
+  }
+
+  changeHighlight() {
+    this.isHighlighted = !this.isHighlighted;
   }
 
   changeStyle(style: string) {
