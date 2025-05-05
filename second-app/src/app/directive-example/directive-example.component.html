@@ -56,4 +56,57 @@
 
 <hr />
 
-<app-switch-example></app-switch-example>
+<app-switch-example [requestStatus]="'Pending'"></app-switch-example>
+<app-switch-example [requestStatus]="'Approved'"></app-switch-example>
+<app-switch-example [requestStatus]="'Rejected'"></app-switch-example>
+
+<hr />
+<div class="container border border-dark">
+  <p>Atribute Directives Example</p>
+
+  <h2 [ngClass]="['bg-primary', 'text-white']">Amex</h2>
+  <h2 [ngClass]="{ 'bg-warning': true, 'bg-success': false }">Mizo</h2>
+
+  <hr />
+  <p>Toggle Theme Example</p>
+  <div
+    class="card"
+    style="width: 18rem"
+    [ngClass]="{
+      'bg-light': !darkTheme,
+      'text-dark': !darkTheme,
+      'bg-dark': darkTheme,
+      'text-white': darkTheme
+    }"
+  >
+    <div class="card-body">
+      <h5 class="card-title">Unlocking Possibilities</h5>
+      <p class="card-text">
+        Every great journey begins with a single step. Take that leap and
+        explore new opportunities waiting just beyond the horizon!
+      </p>
+      <a href="#" class="btn btn-primary">Discover More</a>
+    </div>
+  </div>
+  <button class="btn btn-success mt-3" (click)="changeTheme()">
+    Change theme
+  </button>
+
+  <hr />
+
+  <div class="card" [ngClass]="styleArray">
+    <div class="card-body">
+      <h5 class="card-title">Dynamic Styling with Angular</h5>
+      <p class="card-text">Click a button to change the card's style!</p>
+      <a href="#" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+
+  <br />
+
+  <button btn btn-primary (click)="changeStyle('style1')">Style 1</button>
+  <button btn btn-info (click)="changeStyle('style2')">Style 2</button>
+  <button btn btn-info (click)="changeStyle('style3')">Style 3</button>
+  <button btn btn-info (click)="changeStyle('style4')">Style 4</button>
+  <button btn btn-info (click)="changeStyle('style5')">Style 5</button>
+</div>

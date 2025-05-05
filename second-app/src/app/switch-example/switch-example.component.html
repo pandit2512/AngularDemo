@@ -1,4 +1,41 @@
-<div class="container">
+<div class="container border border-dark mb-2">
+  <div [ngSwitch]="requestStatus">
+    <!-- Pending Request -->
+    <div class="card text-center" *ngSwitchCase="'Pending'">
+      <div class="card-header bg-warning text-white">Pending</div>
+      <div class="card-body">
+        <h5 class="card-title">Request Pending</h5>
+        <p class="card-text">
+          Your request is currently under review. We appreciate your patience
+          and will notify you once a decision has been made.
+        </p>
+        <a href="#" class="btn btn-primary">Check Status</a>
+      </div>
+    </div>
+
+    <!-- Approved -->
+    <div class="card text-center" *ngSwitchCase="'Approved'">
+      <div class="card-header bg-success text-white">Approved</div>
+      <div class="card-body">
+        <h5 class="card-title">Approval Notice</h5>
+        <p class="card-text">
+          Congratulations! Your request has been approved.
+        </p>
+        <a href="#" class="btn btn-success">Proceed</a>
+      </div>
+    </div>
+
+    <!-- Rejected -->
+    <div class="card text-center" *ngSwitchCase="'Rejected'">
+      <div class="card-header bg-danger text-white">Rejected</div>
+      <div class="card-body">
+        <h5 class="card-title">Rejection Notice</h5>
+        <p class="card-text">Unfortunately, your request has been rejected.</p>
+        <a href="#" class="btn btn-danger">Try Again</a>
+      </div>
+    </div>
+  </div>
+
   <h4>{{ requestStatus }}</h4>
   <button class="btn btn-primary m-3" (click)="changeStatus('Pending')">
     Pending

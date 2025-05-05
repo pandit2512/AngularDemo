@@ -14,7 +14,16 @@ export class DirectiveExampleComponent {
 
   show: boolean = true;
 
+  darkTheme: boolean = true;
+
   data = ['A', 'B', 'C'];
+  styleArray = {
+    style1: false,
+    style2: false,
+    style3: false,
+    style4: false,
+    style5: false,
+  };
 
   student = [
     { studentId: 101, studentName: 'Amex' },
@@ -29,5 +38,21 @@ export class DirectiveExampleComponent {
 
   display() {
     this.show = !this.show;
+  }
+
+  changeTheme() {
+    this.darkTheme = !this.darkTheme;
+  }
+
+  changeStyle(style: string) {
+    this.styleArray = {
+      style1: false,
+      style2: false,
+      style3: false,
+      style4: false,
+      style5: false,
+      [style]: true, // Only one active style
+    };
+    // console.log(this.styleArray);
   }
 }

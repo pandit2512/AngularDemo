@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-switch-example',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './switch-example.component.html',
   styleUrl: './switch-example.component.css',
 })
 export class SwitchExampleComponent {
-  requestStatus = 'Pending';
+  @Input() requestStatus = 'Pending';
 
   changeStatus(status: string) {
     this.requestStatus = status;

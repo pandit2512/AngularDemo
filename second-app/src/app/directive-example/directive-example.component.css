@@ -5,3 +5,37 @@
   display: inline-block;
   margin: 10px;
 }
+
+.card {
+  width: 18rem;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.style1 {
+  background-color: lightblue;
+  border: 2px solid blue;
+  border-radius: 10px;
+}
+.style2 {
+  background-color: lightcoral;
+  border: 2px dotted red;
+  border-radius: 50%;
+}
+.style3 {
+  background-color: lightgreen;
+  border: 3px dashed green;
+  border-radius: 20px;
+}
+.style4 {
+  background-color: lightgoldenrodyellow;
+  border: 4px double gold;
+  border-radius: 30px;
+}
+.style5 {
+  background-color: lavender;
+  border: 5px groove purple;
+  border-radius: 40px;
+}
