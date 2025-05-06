@@ -1,0 +1,12 @@
+<div class="container">
+  <p>recruiter works!</p>
+  <p *ngFor="let x of recruiterData">{{ x.id }} : {{ x.name }}</p>
+  <hr />
+
+  <h4>{{ inputData }}</h4>
+  <input type="text" #recruiterInput />
+  <br />
+  <button class="btn btn-primary mt-2" (click)="getDataFromInputBox()">
+    Get recruiter Data
+  </button>
+</div>
