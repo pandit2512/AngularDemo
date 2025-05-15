@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            routerLink="/"
+            routerLinkActive="active-route"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+
+        <!-- dashboard -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/dash"
+            routerLinkActive="active-route"
+            >Dashboard</a
+          >
+        </li>
+        <!-- Product -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/product/6"
+            routerLinkActive="active-route"
+            >Product</a
+          >
+        </li>
+
+        <!-- Orders -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/orders"
+            routerLinkActive="active-route"
+            >Orders</a
+          >
+
+          <!-- Orders -->
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/category"
+            routerLinkActive="active-route"
+            >Category</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/category/details/50"
+            routerLinkActive="active-route"
+            >Category details</a
+          >
+        </li>
+        <!-- Profile -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/profile"
+            routerLinkActive="active-route"
+            >Profile</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <button class="btn btn-primary m-2" (click)="setRole('User')">
+            User
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger m-2" (click)="setRole('Admin')">
+            Admin
+          </button>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+.box {
+  font-size: 60px;
+}
+
+.active-route {
+  text-decoration: 2px underline white;
+}
